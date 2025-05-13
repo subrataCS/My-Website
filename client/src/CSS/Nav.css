@@ -1,0 +1,36 @@
+.main_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    position: sticky;
+    top:0;
+    z-index: 2;
+    background-color: #232729;
+    /* width: 70vh; */
+    border-bottom: 1px solid white;
+}
+.logo a{
+color:white;
+color:var(--link-color);
+text-decoration: none;
+}
+.logo{
+    font-size: 1.3rem;
+}
+.options{
+    display: flex;
+    list-style-type: none;
+}
+.options li{
+margin: 1rem;
+font-size: 1.1rem;
+cursor: pointer;
+}
+.options li a {
+    text-decoration: none;
+    color: white;
+}
+.options li a:hover{
+    color:#FF4500;
+}

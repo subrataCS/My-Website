@@ -1,0 +1,27 @@
+/* .tutorial_card{
+    border:2px solid red;
+    margin:2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+.card_items{
+    border:2px solid red;
+    width: 400px;
+    padding:1rem;
+    margin:3px;
+    height: auto;
+      display: flex; 
+    justify-content: space-between; 
+     align-items: center; 
+     flex-direction: column;
+    
+}
+
+.tutorial_btn{
+    padding:0.3rem 1rem;
+    border-radius: 3px;
+    border: none;
+} */

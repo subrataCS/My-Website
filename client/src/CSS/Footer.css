@@ -1,0 +1,30 @@
+.footer{
+    /* border:2px solid red; */
+    display: flex;
+    align-items: center;
+    gap:10rem;
+    justify-content: center; 
+    margin-top: 2rem; 
+    padding-bottom: 10rem;
+    cursor: pointer;
+    /* border-bottom: 1px dotted white; */
+}
+.footer a{
+    text-decoration: none;
+}
+
+
+.footer_navigation h1{
+    font-size: 3rem;
+    color:var(--text-color);
+    
+}
+.footer_navigation h2{
+    font-size: 3rem;
+}
+.footer_navigation:hover{
+    text-decoration: underline;
+    transition: 0.5s ease;
+    color:orange;
+}
+
