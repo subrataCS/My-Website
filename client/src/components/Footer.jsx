@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer">
-        <a href="/Ctf">
+        <a href="/blog">
           <div className="footer_navigation">
             <h1>01</h1>
             <h1>Blog</h1>

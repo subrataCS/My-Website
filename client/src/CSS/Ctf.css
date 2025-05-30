@@ -1,0 +1,27 @@
+.ctf_card{
+    /* border:2px solid red; */
+}
+
+.ctf-title{
+    color: var(--link-color);
+}
+
+.card_items{
+    /* border:3px solid blue; */
+    padding:2rem 4rem;
+}
+.card_items img{
+border-radius: 3px;
+}
+.ctf_btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: none;
+    outline: 0.5px solid lime;
+    cursor: pointer;
+}
+.ctf_btn:hover{
+    transition: 0.2s all ease-in-out;
+    background-color: var(--text-color);
+}

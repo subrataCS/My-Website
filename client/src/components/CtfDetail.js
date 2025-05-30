@@ -4,8 +4,8 @@ import ctf2 from "../writeups/ctf2";
 const CtfDetail = [
   {
     id: 1,
-    title: "CTF Write-up: Basic Web Exploitation",
-    image: "https://i.pinimg.com/736x/69/0d/15/690d156cfc0c2f39427b76fbd3859666.jpg",
+    title: "CTF Write-up: Mr. Robot (Vulnhub) ",
+    image: "https://i.pinimg.com/736x/e1/96/e0/e196e005bbba82e738a63da1bcc79e92.jpg",
     content: "This is the content for the first CTF write-up...",
     date: "March 30, 2025",
     content:ctf1,

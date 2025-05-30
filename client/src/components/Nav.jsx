@@ -18,6 +18,7 @@ const Nav = () => {
         <li><a href="/">Home</a></li>
         <li><a href="/Ctf">CTF</a></li>
         <li><a href="/social">Social</a></li>
+        <li><a href="/blog">Blog</a></li>
 
       </div>
     </nav>

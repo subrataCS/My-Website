@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import CtfSingle from "./components/CtfSingle";
 import Ctf from "./components/Ctf";
 import Contact from "./components/Contact";
+import Blogpost from "./components/Blogpost";
 
 import "./App.css";
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/ctf" element={<Ctf />} />
         <Route path="/ctf/:id" element={<CtfSingle />} />
+        <Route path="/blog" element={<Blogpost />} />
       </Routes>
     </Router>
   );

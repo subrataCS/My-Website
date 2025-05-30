@@ -3,9 +3,7 @@
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
-  background: #121212; /* Dark background */
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3); /* Green hacker glow */
   text-align: center;
 }
 
@@ -35,16 +33,16 @@ label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
-  color: #00ff00; /* Green label text */
+  /* color: var(--link-color); */
 }
 
 /* Inputs & Textarea */
 input, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #00ff00;
-  background: #1a1a1a;
-  color: #00ff00;
+  /* border: 1px solid #00ff00; */
+  background:var(--link-color);
+  color: var(--link-color);
   border-radius: 5px;
   font-size: 16px;
   transition: 0.3s;
@@ -52,33 +50,13 @@ input, textarea {
 
 input:focus, textarea:focus {
   border-color: #ffffff;
-  box-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7);
+  /* box-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7); */
   outline: none;
-}
-
-/* Submit Button */
-button {
-  width: 100%;
-  padding: 12px;
-  /* background: #00ff00; */
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #008000;
-  /* box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7); */
-  color:white;
 }
 
 /* Success Message */
 .success-message {
-  color: #00ff00;
+  /* color: #00ff00; */
   background: rgba(0, 255, 0, 0.1);
   padding: 10px;
   border-radius: 5px;

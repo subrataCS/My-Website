@@ -3,8 +3,8 @@
 body{
   font-family: "Titillium Web", sans-serif;
   font-style: normal;
-  background-color: #232729;
-  color:#BBBBBB;
+  background-color: #4c6d61;
+  color:black  ;
   padding: 1.5rem 4rem;
   max-width: 80vw;
   margin: 0 auto;
@@ -17,7 +17,9 @@ html{
     color:black;
 }
 :root{
-  --text-color:#6A8BAD;
-  --link-color:#FF4500;
+  /* --text-color:#6A8BAD; */
+  --text-color:#c0c0b0;
+  /* --link-color:#d96c4c; */
+  --link-color:#e7e7e7  ;
 }
 

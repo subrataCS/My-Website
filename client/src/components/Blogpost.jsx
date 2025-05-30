@@ -1,59 +1,48 @@
-// import React from "react";
-// import { useParams, Link } from "react-router-dom";
-// import blogPosts from "./Blog"; // Importing blog data
-// import Nav from "./Nav";
+import React, { useState } from "react";
+import blogData from "./Blog";
+import "../CSS/Blog.css";
+import Nav from "./Nav";
 
-// const BlogDetail = () => {
-//   const { id } = useParams(); // Get the blog ID from URL
-//   const postIndex = blogPosts.findIndex((p) => p.id === parseInt(id)); // Find the index of the post
+const Blogpost = () => {
+  const postsPerPage = 3;
+  const [currentPage, setCurrentPage] = useState(1);
 
-//   if (postIndex === -1) {
-//     return <h2>Blog not found</h2>;
-//   }
+  const totalPages = Math.ceil(blogData.length / postsPerPage);
 
-//   const post = blogPosts[postIndex]; // Get the current post
-//   const prevPost = blogPosts[postIndex - 1]; // Get the previous post (if exists)
-//   const nextPost = blogPosts[postIndex + 1]; // Get the next post (if exists)
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = blogData.slice(indexOfFirstPost, indexOfLastPost);
 
-//   return (
-//     <>
-//       <Nav />
-//       <div style={{ padding: "20px", maxWidth: "800px", margin: "auto" }}>
-//         <h1>{post.title}</h1>
-//         <img src={post.image} alt={post.title} width="70%" />
-//         <p>{post.content}</p>
-//         <small>
-//           <strong>Published on:</strong> {post.date}
-//         </small>
+  return (
+    <>
+      <Nav />
+      <h1>Blog Posts</h1>
+      <div className="blog-container">
+        {currentPosts.map((post) => (
+          <div key={post.id} className="blog-card">
+            {post.image && <img src={post.image} alt={post.title} />}
+            <div className="blog-content">
+              <h2>{post.title}</h2>
+              {post.summary && <p>{post.summary}</p>}
+              {post.link && <a href={post.link}>Read More</a>}
+            </div>
+          </div>
+        ))}
+      </div>
 
-//         {/* Pagination Buttons */}
-//         <div
-//           style={{
-//             marginTop: "20px",
-//             display: "flex",
-//             justifyContent: "space-between",
-//           }}
-//         >
-//           {prevPost ? (
-//             <Link to={`/blog/${prevPost.id}`}>
-//               <button>⬅ Previous: {prevPost.title}</button>
-//             </Link>
-//           ) : (
-//             <button disabled>⬅ No Previous Post</button>
-//           )}
+      <div className="pagination">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => setCurrentPage(index + 1)}
+            disabled={currentPage === index + 1}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div>
+    </>
+  );
+};
 
-//           {nextPost ? (
-//             <Link to={`/blog/${nextPost.id}`}>
-//               <button>Next: {nextPost.title} ➡</button>
-//             </Link>
-//           ) : (
-//             <button disabled>No Next Post ➡</button>
-//           )}
-//         </div>
-//         <Link to="/blog">Back</Link>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default BlogDetail;
+export default Blogpost;
